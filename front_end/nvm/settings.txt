@@ -1,0 +1,6 @@
+root: D:\applications\26_nvm
+path: D:\applications\27_nodeJs
+arch: 64
+proxy: none
+node_mirror: http://npm.taobao.org/mirrors/node/
+npm_mirror: https://npm.taobao.org/mirrors/npm/
