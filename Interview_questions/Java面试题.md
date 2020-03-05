@@ -131,33 +131,129 @@ System.out.println(Math.floor(-11.5));//-12.0
 ```
 
 
+# start和run方法的区别
+start()方法:启动线程，在新线程中执行，异步执行
+run()方法，线程方法，方法内的代码称为线程体，调用该方法相当于调用一个普通方法，同步执行
+
+
+# 接口和抽象类的区别
+都不能实例化
+抽象类用来定制模板，即重用代码，接口用来定制标准，即解耦合
+
+接口可以多继承
+
+抽象类
+可以有抽象或者非抽象方法public 或者protected修饰
+private方法必须是普通方法
+不能有default方法
+
+可以不实现抽象类和接口中的方法
+
+属性可以是final的，也可以是static的，不能用default修饰
+可以有static方法,可以直接方法
+
+可以有构造方法，但是不能实例化
+
+
+接口
+接口可以多继承
+默认的方法是public abstract
+default方法不能是抽象的
+不能有proteced和private方法
+
+属性默认是final的只能使用public修饰，也可以是static的
+
+没有构造方法，不能实例化
 
 
 
 
 
 
+# set集合的不重复怎么实现
+
+add()方法后，值作为key放到了hashmap中,value是一个Object的虚拟值
+调用了hashmap的put()
+又调用了putVal()
+新添加的元素不会覆盖旧元素
+
+>首先根据key的hashCode()返回值决定该Entry的存储位置，如果两个key的hash值相同，那么它们的存储位置相同。如果这个两个key的equals比较返回true。那么新添加的Entry的value会覆盖原来的Entry的value，key不会覆盖。且HashSet中add()中 map.put(e, PRESENT)==null 为false，HashSet添加元素失败。因此,如果向HashSet中添加一个已经存在的元素，新添加的集合元素不会覆盖原来已有的集合元素。
+
+
+# ArrayList和 LinkedList 比较
+
+都实现了List接口
+非线程安全，允许重复
+ArrayList
+基于动态数组
+新加入的对象放在数组的尾部
+使用数组，查询速度快(时间复杂度O(1))
+插入删除时需要移动当前索引后面所有的元素，速度慢，时间复杂度O(n)
+数组扩容，每次扩容后的大小为之前的1.5倍，之后复制全部元素，很耗时
+
+最好初始化时传入大小
+
+LinkedList
+基于链表
+新加入的作为最后一个节点链接在链表上
+查找元素，从头到尾遍历，时间复杂度O(n/2)
+插入删除移动指针，时间复杂度O(1)
+双向链表，不需要扩容，直接在前后添加
+
+# ArrayList和Vector的区别
+都是有序不可重复的集合
 
 
 
 
+# Spring IOC和Spring AOP比较
+
+# mysql和Oracle的区别
+(1)对事务的提交
+MySQL默认是自动提交，而Oracle默认不自动提交，需要用户手动提交，需要在写commit;指令或者点击commit按钮
+(2) 分页查询
+MySQL是直接在SQL语句中写"select... from ...where...limit  x, y",有limit就可以实现分页;而Oracle则是需要用到伪列ROWNUM和嵌套查询
+(3) 事务隔离级别
+MySQL是read commited的隔离级别，而Oracle是repeatable read的隔离级别，同时二者都支持serializable串行化事务隔离级别，可以实现最高级别的
+读一致性。每个session提交后其他session才能看到提交的更改。Oracle通过在undo表空间中构造多版本数据块来实现读一致性，每个session
+查询时，如果对应的数据块发生变化，Oracle会在undo表空间中为这个session构造它查询时的旧的数据块
+MySQL没有类似Oracle的构造多版本数据块的机制，只支持read commited的隔离级别。一个session读取数据时，其他session不能更改数据，但
+可以在表最后插入数据。session更新数据时，要加上排它锁，其他session无法访问数据
+(4) 对事务的支持
+MySQL在innodb存储引擎的行级锁的情况下才可支持事务，而Oracle则完全支持事务
+(5) 保存数据的持久性
+MySQL是在数据库更新或者重启，则会丢失数据，Oracle把提交的sql操作线写入了在线联机日志文件中，保持到了磁盘上，可以随时恢复
+(6) 并发性
+MySQL以表级锁为主，对资源锁定的粒度很大，如果一个session对一个表加锁时间过长，会让其他session无法更新此表中的数据。
+虽然InnoDB引擎的表可以用行级锁，但这个行级锁的机制依赖于表的索引，如果表没有索引，或者sql语句没有使用索引，那么仍然使用表级锁。
+Oracle使用行级锁，对资源锁定的粒度要小很多，只是锁定sql需要的资源，并且加锁是在数据库中的数据行上，不依赖与索引。所以Oracle对并发性的支持要好很多。
+
+(13)最重要的区别
+MySQL是轻量型数据库，并且免费，没有服务恢复数据。
+Oracle是重量型数据库，收费，Oracle公司对Oracle数据库有任何服务。
+(13) 自动增长的数据类型处理
+MYSQL有自动增长的数据类型，插入记录时不用操作此字段，会自动获得数据值。ORACLE没有自动增长的数据类型，需要建立一个自动增长的序列号，插入记录时要把序列号的下一个值赋于此字段。
+```sql
+CREATE SEQUENCE 序列号的名称 (最好是表名+序列号标记) INCREMENT BY 1
+START WITH 1 MAXVALUE 99999 CYCLE NOCACHE;
+```
+其中最大的值按字段的长度来定, 如果定义的自动增长的序列号 NUMBER(6) , 最大值为999999
+INSERT 语句插入这个字段值为: 序列号的名称.NEXTVAL
+
+(14) 单引号的处理
+MYSQL里可以用双引号包起字符串，ORACLE里只可以用单引号包起字符串。在插入和修改字符串前必须做单引号的替换：把所有出现的一个单引号替换成两个单引号。
 
 
 
+# Mybatis的使用流程
+# http协议
+# 模拟请求 http
+# `==`和`equals()`的区别
+==对于基本数据类型比较的是值
 
+equals()方法是Object中的方法，里面使用的是`==`作比较
+String 重写了equals()方法
 
-
-
-
-
-
-
-
-
-
-
-
-进程的物种
 
 
 
