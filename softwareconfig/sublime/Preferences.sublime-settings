@@ -1,0 +1,39 @@
+{
+	"font_options":
+	[
+		// 设置缩放比例
+		"gdi",
+		"no_bold",
+	],
+	//设置字体，默认字体为Consolas
+	// "font_face": "comic sans ms",
+	// "font_face": "YaHei Consolas hybrid",
+	// "font_face": "monaco",
+	// 使用unix 风格
+	"default_line_ending": "unix",
+	// 用于预览添加边框
+	"draw_minimap_border": true,
+	// 使光标闪动更加柔和
+	"caret_style": "phase",
+	// 保证在文件保存时，移除每行结尾多余空格
+	"trim_trailing_white_space_on_save": true,
+	//让文件夹加粗，粗的还是细的，根据自身情况奥
+	"bold_folder_labels": true,
+
+	// 设置字体大小
+	"font_size": 13,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"theme": "Soda Dark 3.sublime-theme",
+	// 禁止自动更新
+	"update_check": false,
+
+	// 高亮当前行
+	"highlight_line":true,
+	// 高亮有修改，且尚未保存的标签
+	"highlight_modified_tabs":true,
+	// 是否启用自动换行
+	"word_wrap": "auto",
+}
