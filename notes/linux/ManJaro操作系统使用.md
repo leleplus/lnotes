@@ -116,3 +116,7 @@ export NVM_DIR="$HOME/.nvm"
 
 如果nvm 找不到
 source .bashrc
+
+
+钉钉
+https://github.com/nashaofu/dingtalk/releases/tag/v2.0.12
