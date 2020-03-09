@@ -104,3 +104,15 @@ export XMODIFIERS="@im=fcitx"
 
 安装Teamviewer
 `sudo pacman -S teamviewer`
+
+安装nvm 
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+添加环境变量(正常已经添加好了)
+~/.bashrc
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+如果nvm 找不到
+source .bashrc
