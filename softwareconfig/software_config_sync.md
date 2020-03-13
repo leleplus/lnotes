@@ -10,6 +10,10 @@
 	* HTTPS : https://github.com/leleplus/idea-sync-settings.git
 github token: 607204e8307db7d22ec4f03e85131e035e944155
 
+	* plugs
+		* mybatis code Helper Pro
+			链接: https://pan.baidu.com/s/1OWjUze3SvS8eyEuTe7wdpA 密码: ev6u
+
 
 2.Visual Studio Code设置同步
 安装插件Settings Sync

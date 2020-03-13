@@ -500,5 +500,10 @@ $ git pull  origin master
 # 远程仓库和本地仓库完全独立
 $ git pull origin master --allow-unrelated-histories
 
-
+git 克隆代码时，网络特别慢，经常断连，提示`the remote end hung up unexpectedly`
+增加最低速度时间
+```bash
+git config --global http.lowSpeedLimit 0
+git config --global http.lowSpeedTime 999999
+```
 
