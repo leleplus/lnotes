@@ -8,7 +8,7 @@
 同步仓库地址:
 	* SSH   : git@github.com:leleplus/idea-sync-settings.git
 	* HTTPS : https://github.com/leleplus/idea-sync-settings.git
-github token: 607204e8307db7d22ec4f03e85131e035e944155
+github token: 5fe5cafbb357c9e9299ff6e3e648663ce3fafdab
 
 	* plugs
 		* mybatis code Helper Pro
