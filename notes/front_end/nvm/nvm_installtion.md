@@ -179,3 +179,15 @@ nvm install latest
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
+
+## 设置npm安装包和缓存的位置
+
+```
+npm config set cache "D:\nodejs\node_cache"
+npm config set prefix "D:\nodejs\node_global"
+```
+
+
+设置npm淘宝镜像
+`npm config set registry https://registry.npm.taobao.org`
+
