@@ -529,3 +529,6 @@ set GIT_CURL_VERBOSE=1
 
 git 删除已经`git add`的文件 `git rm --cached *`
 `git rm --f <file>`不仅会将文件从本地删除，还会将文件从暂存区删除
+
+`git add`换行符问题
+`git config --global core.autocrlf false` 提交和拉取代码时，均不转换换行符
