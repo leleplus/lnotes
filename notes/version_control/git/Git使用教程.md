@@ -531,4 +531,16 @@ git 删除已经`git add`的文件 `git rm --cached *`
 `git rm --f <file>`不仅会将文件从本地删除，还会将文件从暂存区删除
 
 `git add`换行符问题
-`git config --global core.autocrlf false` 提交和拉取代码时，均不转换换行符
+`git config --global core.autocrlf false` 提交和拉取代码时，均不转换换行符,注意`--global`是全局配置
+
+`git init`创建本地仓库，远程也创建了仓库，远程有readme文件
+关联远程库
+`git remote add origin <ssh/https>`
+推送之前先要拉取远程的readme
+`git pull origin master:master`
+第一次推送
+`git push -u origin master`
+后续推送
+`git push`
+
+
