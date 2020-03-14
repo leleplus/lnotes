@@ -526,3 +526,6 @@ set GIT_TRACE_PACKET=1
 set GIT_TRACE=1
 set GIT_CURL_VERBOSE=1
 ```
+
+git 删除已经`git add`的文件 `git rm --cached *`
+`git rm --f <file>`不仅会将文件从本地删除，还会将文件从暂存区删除
