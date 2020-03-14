@@ -506,4 +506,23 @@ git 克隆代码时，网络特别慢，经常断连，提示`the remote end hun
 git config --global http.lowSpeedLimit 0
 git config --global http.lowSpeedTime 999999
 ```
+httpBuffer加大
 
+git config --global http.postBuffer 524288000
+
+压缩配置
+
+git config --global core.compression -1
+
+linux
+```bash
+export GIT_TRACE_PACKET=1
+export GIT_TRACE=1
+export GIT_CURL_VERBOSE=1
+```
+windows
+```bash
+set GIT_TRACE_PACKET=1
+set GIT_TRACE=1
+set GIT_CURL_VERBOSE=1
+```
