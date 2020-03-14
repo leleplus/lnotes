@@ -36,4 +36,6 @@
 	"highlight_modified_tabs":true,
 	// 是否启用自动换行
 	"word_wrap": "auto",
+	// 失去焦点后自动保存
+	"save_on_focus_lost": true
 }
