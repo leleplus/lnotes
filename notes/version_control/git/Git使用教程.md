@@ -544,3 +544,23 @@ git 删除已经`git add`的文件 `git rm --cached *`
 `git push`
 
 
+# 七、标签管理
+标签即git的release版本，在git中叫tag,添加的tag会默认将当前的代码归档，整理成`.zip`和`.tar.gz`文件
+查看已有的tag
+`git tag`
+新建tag
+`git tag <tagname>`
+新建tag时指定tag说明
+`git tag -a <tagname> -m ""`不写`-m`会打开vi编辑，可以写多行
+删除tag
+`git tag -d <tagname>`
+查看tag详情
+`git show <tagname>`
+某个已经commit的版本打tag
+`git tag -a <tagname> <commitId> -m "message"`
+将tag推送到远程
+`git push origin <tagname>`
+切换到某个tag
+`git checkout <tag>`
+删除远程仓库的tag
+`git push origin :refs/tags/<tagName>`
