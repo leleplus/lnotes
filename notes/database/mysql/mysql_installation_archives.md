@@ -18,7 +18,7 @@ author:witt
 mysql开源免费，可以不注册登录直接下载，下载完成后，存放在电脑的指定位置
 
 ## 二、安装mysql
-### 1.将mysql压缩文件解压缩
+### 1.将mysql压缩文件解压缩(解压路径即为安装路径，建议不要出现中文)
 
 ![image-20200314132644941](mysql_installation_archives.assets/image-20200314132644941.png)
 
