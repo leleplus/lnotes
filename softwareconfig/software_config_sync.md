@@ -17,7 +17,7 @@ github token: 5fe5cafbb357c9e9299ff6e3e648663ce3fafdab
 
 2.Visual Studio Code设置同步
 安装插件Settings Sync
-GitHub Token: 68eb1276c5ebb5d728e250ed8d8ebb6a26d74276
+GitHub Token: bbc0ac157a16236948e652c68b41c69c9bfbad72
 GitHub Gist : 0e3504c1581eb13cd1437f23d33c9ca6
 
 
