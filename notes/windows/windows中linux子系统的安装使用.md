@@ -2,7 +2,7 @@
 
 作者: 乐乐
 
-> 本教程适用于最新版Windows10，阅读前请先在设置-->更新，更新到最新版操作系统
+> 本教程适用于最新版Windows10，阅读前请先在设置-->更新，更新到最新版Windows操作系统
 
 
 # 一、开启Windows对Linux子系统支持
@@ -43,6 +43,41 @@
 
 ![image-20200426213951099](windows%E4%B8%ADlinux%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8.assets/image-20200426213951099.png)
 
-![image-20200427124418560](windows%E4%B8%ADlinux%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8.assets/image-20200427124418560.png)
-
+4.等待下载完成
 ![image-20200427124437152](windows%E4%B8%ADlinux%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8.assets/image-20200427124437152.png)
+
+5.下载安装完成后，打开开始菜单，就能看到安装好的Linux系统
+
+![image-20200428205624864](windows%E4%B8%ADlinux%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8.assets/image-20200428205624864.png)
+
+6.点击图标，打开Ubuntu Linux
+![image-20200428205928868](windows%E4%B8%ADlinux%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8.assets/image-20200428205928868.png)
+
+7.敲击回车键，开始配置
+
+![image-20200428210026577](windows%E4%B8%ADlinux%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8.assets/image-20200428210026577.png)
+
+8.默认用户名为`root`,已经存在，新建一个普通用户，输入用户名点击回车
+![image-20200428210157912](windows%E4%B8%ADlinux%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8.assets/image-20200428210157912.png)
+
+9.输入密码，点击回车，再次确认输入后，点击回车，用户创建完成
+![image-20200428210348627](windows%E4%B8%ADlinux%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8.assets/image-20200428210348627.png)
+
+10.安装完成后，Linux子系统就可以使用了，并且集成了git等常用工具
+![image-20200428210522772](windows%E4%B8%ADlinux%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8.assets/image-20200428210522772.png)
+
+# 三、使用Linux子系统
+访问Linux子系统的方式很多，比如：桌面点击Ubuntu图标，使用`ssh`服务，通过命令行访问。下面介绍
+
+由于日常使用Linux都是命令，这里推荐使用`cmder`代替Windows下的`cmd`，[点击了解](https://segmentfault.com/a/1190000021029858)
+
+1.通过桌面访问，直接点击Ubuntu图标即可
+
+2.通过终端访问
+打开cmd，直接输入命令`bash`,挂在到`/mnt/`下的当前磁盘，想回到家目录，再次敲击`cd`
+![image-20200428211729270](windows%E4%B8%ADlinux%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8.assets/image-20200428211729270.png)
+
+3.访问Windows磁盘下的文件，直接到`/mnt/`下即可，例如`C`盘`cd /mnt/c/`,`D`盘`cd /mnt/d`
+![image-20200428212446710](windows%E4%B8%ADlinux%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8.assets/image-20200428212446710.png)
+
+其余就是Linux基本操作。
